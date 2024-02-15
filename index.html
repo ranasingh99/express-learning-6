@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpressLogin</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(1, 5, 8);
+        }
+        #login-heading{
+            text-align: center;
+            color: azure;
+            font-size: 60px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            font-display: fallback;
+            text-shadow: 2px 2px 5px black;
+        }
+        .main-form{
+          
+            height: 300px;
+            width: 480px;
+            margin-left: 480px;
+        }
+        .login-form{
+            text-align: left;
+            font-size: 25px;
+            color: azure;
+            text-shadow: 2px 2px 5px black;
+            padding-top: 30px;
+            margin-left: 10px;
+        }
+    #form-submit-btn{
+        width: 450px;
+        height: 30px;
+        border-radius: 5px;
+        color: rgb(33, 12, 92);
+        background-color: crimson;
+        margin-top: 30px;
+        font-weight: bold;
+        font-size: medium;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="login-heading">LOGIN</h1>
+    </header>
+    <main class="main-form">
+        <form action="api/v1/rana" method="post" class="login-form">
+            <container class="usernameinfo">
+                <label for="username" id="userlabel">Username:</label>
+                <input type="text" id="username" name="username" placeholder="username"  style="width: 300px; margin-left: 20px;"><br/><br/>
+            </container>
+            <container class="passwordinfo">
+                <label for="password" id="pwd-label">Password:</label>
+                <input type="password" id="password" name="password" placeholder="password"  style="width: 300px; margin-left: 20px; margin-top: 50px;" required><br/><br/>
+            </container>
+            <button type="submit" id="form-submit-btn">LOGIN</button>
+            <p style="text-align: right;">forgot password?</p>
+        </form>
+    </main>
+</body>
+</html>
